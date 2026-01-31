@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #121212;
+  /* Deep Charcoal */
+  --color-primary-light: #1e1e1e;
+  --color-accent: #3B82F6;
+  /* Electric Blue */
+  --color-accent-hover: #2563EB;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-subtle: #0a0a0a;
+  --color-text-main: #ffffff;
+  --color-text-muted: #94a3b8;
+  --color-text-dark: #0f172a;
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-section: 6rem;
+  --spacing-element: 1.5rem;
+
+  /* Effects */
+  --blur-glass: 12px;
+  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.5);
+  --shadow-elevation: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    background-color: var(--color-primary);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(var(--blur-glass));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+}
