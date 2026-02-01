@@ -69,35 +69,42 @@ export function ModernHero() {
                         <motion.div
                             animate={{ y: [0, -20, 0] }}
                             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-                            className="relative w-96 h-[500px] glass-panel rounded-2xl border border-white/10 shadow-[var(--shadow-glow)] z-20 overflow-hidden"
+                            className="relative w-96 h-[500px] z-20"
                         >
-                            {/* Card Background Image */}
-                            <div className="absolute inset-0">
-                                <img
-                                    src="https://images.gestionaleimmobiliare.it/foto/annunci/251019/4647138/600x600/000__drone-4.jpg"
-                                    alt="Villa in vendita a Cossombrato"
-                                    className="w-full h-full object-cover"
-                                />
-                                {/* Gradient Overlay for text readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/50 to-transparent opacity-90" />
-                            </div>
-
-                            <div className="absolute top-0 right-0 p-8 opacity-20 text-[var(--color-accent)] z-10">
-                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2L2 22h20L12 2zm0 3.8L18.4 20H5.6L12 5.8z" />
-                                </svg>
-                            </div>
-
-                            <div className="relative h-full flex flex-col justify-end p-6 z-10">
-                                <h3 className="text-3xl font-display text-white mb-2 leading-tight">Villa a Cossombrato</h3>
-                                <p className="text-[var(--color-accent)] mb-4">Asti, Italia</p>
-                                <div className="flex justify-between items-center text-sm text-gray-400 border-t border-white/10 pt-4">
-                                    <div className="flex items-center gap-2">
-                                        <span>355 m²</span>
-                                    </div>
-                                    <span className="text-white font-semibold text-lg">€ 370.000</span>
+                            <a
+                                href="https://www.royalteam-immobiliare.it/it/villa-vendita-cossombrato-4647138"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full h-full glass-panel rounded-2xl border border-white/10 shadow-[var(--shadow-glow)] overflow-hidden transition-transform hover:scale-[1.02]"
+                            >
+                                {/* Card Background Image */}
+                                <div className="absolute inset-0">
+                                    <img
+                                        src="https://images.gestionaleimmobiliare.it/foto/annunci/251019/4647138/600x600/000__drone-4.jpg"
+                                        alt="Villa in vendita a Cossombrato"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    {/* Gradient Overlay for text readability */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/50 to-transparent opacity-90" />
                                 </div>
-                            </div>
+
+                                <div className="absolute top-0 right-0 p-8 opacity-20 text-[var(--color-accent)] z-10">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2L2 22h20L12 2zm0 3.8L18.4 20H5.6L12 5.8z" />
+                                    </svg>
+                                </div>
+
+                                <div className="relative h-full flex flex-col justify-end p-6 z-10">
+                                    <h3 className="text-3xl font-display text-white mb-2 leading-tight">Villa a Cossombrato</h3>
+                                    <p className="text-[var(--color-accent)] mb-4">Asti, Italia</p>
+                                    <div className="flex justify-between items-center text-sm text-gray-400 border-t border-white/10 pt-4">
+                                        <div className="flex items-center gap-2">
+                                            <span>355 m²</span>
+                                        </div>
+                                        <span className="text-white font-semibold text-lg">€ 370.000</span>
+                                    </div>
+                                </div>
+                            </a>
                         </motion.div>
 
                         {/* Decorative Elements */}

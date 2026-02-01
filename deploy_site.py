@@ -112,7 +112,7 @@ def main():
              files = []
              ftp.retrlines('NLST', files.append)
              for f in files:
-                 if f in ['.', '..', 'public_html']: continue
+                 if f in ['.', '..', 'public_html', 'www']: continue
                  try:
                      if '.' in f: # Assume file
                         ftp.delete(f)
