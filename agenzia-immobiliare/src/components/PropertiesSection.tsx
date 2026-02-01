@@ -50,14 +50,7 @@ export const PropertiesSection = ({ category }: PropertiesSectionProps) => {
                             Una collezione curata di proprietà prestigiose gestite direttamente da noi.
                         </p>
                     </div>
-                    <a
-                        href="https://www.royalteam-immobiliare.it/it/immobili-in-vendita"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-white hover:text-[var(--color-accent)] font-medium uppercase tracking-widest border-b border-white hover:border-[var(--color-accent)] pb-1 transition-colors cursor-pointer"
-                    >
-                        Vedi tutti gli immobili
-                    </a>
+
                 </motion.div>
 
                 {filteredListings.length > 0 ? (
