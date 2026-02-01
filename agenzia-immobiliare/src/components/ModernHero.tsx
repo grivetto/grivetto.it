@@ -81,7 +81,7 @@ export function ModernHero() {
                                 {/* Card Background Image */}
                                 <div className="absolute inset-0">
                                     <img
-                                        src="https://images.gestionaleimmobiliare.it/foto/annunci/251019/4647138/600x600/000__drone-4.jpg"
+                                        src="https://images.gestionaleimmobiliare.it/foto/annunci/251019/4647138/600x600/000__drone-5.jpg"
                                         alt="Villa in vendita a Cossombrato"
                                         className="w-full h-full object-cover"
                                     />
