@@ -63,8 +63,7 @@ export const Footer = () => {
                             <div>
                                 <h4 className="text-white font-medium mb-1">Torino</h4>
                                 <p className="text-[var(--color-text-muted)] text-sm mb-3">
-                                    C.so Casale 319 - 10132 TO<br />
-                                    Via Luigi Cibrario 30 - 10143 TO
+                                    C.so Casale 319 - 10132 TO
                                 </p>
                                 <div>
                                     <a
