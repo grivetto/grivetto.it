@@ -4,6 +4,7 @@ import { BentoFeatures } from "./components/BentoFeatures";
 import { PropertiesSection } from "./components/PropertiesSection";
 import { ContactCTA } from "./components/ContactCTA";
 import { Footer } from "./components/Footer";
+import { AboutSection } from './components/AboutSection';
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
@@ -35,7 +36,7 @@ function App() {
         <Navbar />
 
         <ModernHero />
-
+        <AboutSection />
         <BentoFeatures />
 
         <div id="immobili-vendita">

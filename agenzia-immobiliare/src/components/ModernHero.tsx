@@ -10,7 +10,8 @@ export function ModernHero() {
                 <div className="absolute inset-0 bg-[var(--color-primary)] opacity-90 z-0" />
                 <img
                     src={heroBg}
-                    alt="Luxury Interior"
+                    alt="Luxury Interior Design - Appartamento di Lusso a Torino"
+                    fetchPriority="high"
                     className="w-full h-full object-cover object-center opacity-40 mix-blend-overlay"
                 />
             </div>

@@ -31,6 +31,43 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Marco Grivetto | Royal Team Immobiliare",
+      "image": "https://grivetto.it/og-image.jpg",
+      "@id": "https://grivetto.it",
+      "url": "https://grivetto.it",
+      "telephone": "+393470034777",
+      "email": "marco@royalteam-immobiliare.it",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Luigi Cibrario 30",
+        "addressLocality": "Torino",
+        "postalCode": "10143",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.0779,
+        "longitude": 7.6565
+      },
+      "areaServed": ["Torino", "Asti", "Piemonte"],
+      "priceRange": "$$$",
+      "founder": {
+        "@type": "Person",
+        "name": "Marco Grivetto"
+      },
+      "sameAs": [
+        "https://www.facebook.com/agenziaroyalteam/",
+        "https://www.instagram.com/royalteamimmobiliare/",
+        "https://x.com/royalteamimmobiliare"
+      ]
+    }
+  </script>
 </body>
 
 </html>
