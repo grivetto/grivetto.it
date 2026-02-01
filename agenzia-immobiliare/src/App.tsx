@@ -14,7 +14,9 @@ function App() {
   // PropertiesSection category={category}
   // So read is used, but write is not?
   // Let's keep category but ignore setCategory destructuring.
-  const [category] = useState<string | null>(null);
+  // const [category, setCategory] = useState<string | null>(null);
+  // Unused state removed
+
 
   // Smooth scroll to top on load
   useState(() => {
@@ -36,8 +38,12 @@ function App() {
 
         <BentoFeatures />
 
-        <div id="immobili">
-          <PropertiesSection category={category} />
+        <div id="immobili-vendita">
+          <PropertiesSection category="VENDITA" />
+        </div>
+
+        <div id="immobili-affitto">
+          <PropertiesSection category="AFFITTO" />
         </div>
 
         <div id="richiedi-appuntamento">

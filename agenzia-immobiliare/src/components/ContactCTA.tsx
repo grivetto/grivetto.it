@@ -27,7 +27,7 @@ export const ContactCTA = () => {
 
                     <div>
                         <a
-                            href="mailto:marco@grivetto.it"
+                            href="mailto:marco@royalteam-immobiliare.it"
                             className="inline-block bg-white text-[var(--color-accent)] px-8 py-4 font-bold uppercase tracking-widest hover:bg-black/20 hover:text-white transition-all duration-300 shadow-lg"
                         >
                             Contattaci

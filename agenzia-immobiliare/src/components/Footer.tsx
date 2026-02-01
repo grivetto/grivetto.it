@@ -59,25 +59,27 @@ export const Footer = () => {
                                         className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-accent)] hover:text-white transition-colors group"
                                     >
                                         <MapPin size={14} className="group-hover:animate-bounce" />
-                                        Vedi posizione 1
-                                    </a>
-                                    <a
-                                        href="https://maps.app.goo.gl/Fud7e6GW5His3hve7?g_st=aw"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-accent)] hover:text-white transition-colors group"
-                                    >
-                                        <MapPin size={14} className="group-hover:animate-bounce" />
-                                        Vedi posizione 2
+                                        Vedi posizione
                                     </a>
                                 </div>
                             </div>
                             <div>
                                 <h4 className="text-white font-medium mb-1">Torino</h4>
-                                <p className="text-[var(--color-text-muted)] text-sm">
+                                <p className="text-[var(--color-text-muted)] text-sm mb-3">
                                     C.so Casale 319 - 10132 TO<br />
                                     Via Luigi Cibrario 30 - 10143 TO
                                 </p>
+                                <div>
+                                    <a
+                                        href="https://maps.app.goo.gl/pgQFZy5cW2Hvg7cP9"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-accent)] hover:text-white transition-colors group"
+                                    >
+                                        <MapPin size={14} className="group-hover:animate-bounce" />
+                                        Vedi posizione
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,15 +90,8 @@ export const Footer = () => {
                             Contatti
                         </h3>
                         <div className="space-y-4">
-                            <a href="tel:0114338496" className="block text-[var(--color-text-muted)] hover:text-white transition-colors">
-                                Tel. 011 4338496
-                            </a>
-                            <p className="text-[var(--color-text-muted)] block">Fax 011 4379934</p>
                             <a href="tel:3470034777" className="block text-2xl font-display text-white hover:text-[var(--color-accent)] transition-colors">
                                 347.0034777
-                            </a>
-                            <a href="mailto:info@royalteam-immobiliare.it" className="block text-[var(--color-text-muted)] hover:text-white transition-colors">
-                                info@royalteam-immobiliare.it
                             </a>
                             <a href="mailto:marco@royalteam-immobiliare.it" className="block text-[var(--color-text-muted)] hover:text-white transition-colors">
                                 marco@royalteam-immobiliare.it

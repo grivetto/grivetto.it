@@ -51,17 +51,34 @@ async function processListings() {
 
                 const area = $el.find('.fa-ruler-combined').parent().text().replace(':', '').trim();
 
-                if (codeText && codeText.toUpperCase().startsWith('MGR')) {
-                    allListings.push({
-                        id: codeText,
-                        title,
-                        price,
-                        location: 'Torino & Provincia',
-                        image,
-                        link,
-                        area,
-                        code: codeText
-                    });
+                if (codeText) {
+                    const upperCode = codeText.toUpperCase();
+                    let type = 'Unknown';
+
+                    if (upperCode.startsWith('MGRV') || upperCode.startsWith('MGR')) {
+                        // Default historic MGR to Sale if unsure, or strictly split?
+                        // User request: "MGRA... AFFITTO", "MGRV... VENDITA"
+                        if (upperCode.startsWith('MGRA')) {
+                            type = 'Rent';
+                        } else {
+                            // Assume MGR or MGRV is sale
+                            type = 'Sale';
+                        }
+                    }
+
+                    if (upperCode.startsWith('MGR')) {
+                        allListings.push({
+                            id: codeText,
+                            title,
+                            price,
+                            location: 'Torino & Provincia',
+                            image,
+                            link,
+                            area,
+                            code: codeText,
+                            type: type
+                        });
+                    }
                 }
             });
         }

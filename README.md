@@ -17,10 +17,11 @@ Questo progetto è costruito con uno stack frontend moderno focalizzato su prest
 *   **/agenzia-immobiliare**: Il codice sorgente principale dell'applicazione React.
     *   `/src/components`: Componenti UI riutilizzabili (Hero, Navbar, BentoGrid, Footer).
     *   `/src/assets`: Immagini e risorse statiche.
-*   **/www**: La directory di staging locale per la build di produzione.
+*   **/www**: La directory di staging locale per la build di produzione (puntata a `agenzia-immobiliare/dist`).
 *   **Script Python**: Script DevOps personalizzati per il deploy FTP e la diagnostica del server.
-    *   `deploy_site_www.py`: Distribuisce la cartella `www` sul server FTP remoto.
-    *   `probe_server.py`: Strumento diagnostico per controlli dell'ambiente server.
+    *   `deploy_site.py`: Distribuisce la build di produzione (`dist`) nella cartella `/www` del server FTP remoto, gestendo la pulizia automatica.
+    *   `download-listings.js`: Script Node.js per scaricare le ultime inserzioni dal sito live.
+    *   `fetch-listings.js`: Elabora i dati scaricati e classifica in VENDITA e AFFITTO.
 
 ## 🛠️ Sviluppo
 
@@ -50,12 +51,13 @@ Gli artefatti della build verranno generati nella cartella `dist`.
 
 ## 🌍 Deploy
 
-Il sito è distribuito su un ambiente di hosting standard LAMP/FTP (Register.it).
+Il sito è distribuito su un ambiente di hosting standard LAMP/FTP (Register.it) nella cartella `/www`.
 
 **Flusso di Lavoro per il Deploy:**
-1.  Esegui `npm run build` per generare il sito statico.
-2.  Sincronizza la cartella `dist` nella directory locale `www`.
-3.  Esegui `python deploy_site_www.py` per caricare le modifiche via FTP.
+1.  Esegui `npm run build` per generare il sito statico aggiornato.
+2.  Esegui `python deploy_site.py`. Lo script:
+    *   Pulisce la directory remota `/www`.
+    *   Carica il contenuto di `agenzia-immobiliare/dist` in `/www`.
 
 ## ✨ Funzionalità Chiave
 

@@ -11,6 +11,14 @@ export const PropertiesSection = ({ category }: PropertiesSectionProps) => {
         if (!category) return true;
         const lowerTitle = item.title.toLowerCase();
 
+        // Handle strict Types from data
+        if (category === 'VENDITA') {
+            return (item as any).type === 'Sale';
+        }
+        if (category === 'AFFITTO') {
+            return (item as any).type === 'Rent';
+        }
+
         switch (category) {
             case 'Residenziale':
                 return lowerTitle.includes('appartamento') || lowerTitle.includes('casa') || lowerTitle.includes('bifamiliare') || lowerTitle.includes('attico');
