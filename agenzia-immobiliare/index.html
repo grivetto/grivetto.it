@@ -7,17 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>Marco Grivetto | Royal Team Immobiliare - Immobili di Pregio a Torino</title>
+  <title>Immobili di Pregio Asti e Torino | Marco Grivetto - Royal Team Immobiliare</title>
   <meta name="description"
-    content="Scopri immobili di prestigio e lusso a Torino e provincia. Marco Grivetto offre una selezione esclusiva di ville, appartamenti e attici per una clientela esigente." />
+    content="Immobili di lusso ad Asti e Torino. Marco Grivetto seleziona ville, appartamenti e proprietà esclusive per clienti esigenti. Consulenza immobiliare professionale dal 2009." />
+  <meta name="keywords"
+    content="immobili di pregio Asti, immobili di lusso Torino, ville Asti, appartamenti Torino, agenzia immobiliare Asti, consulente immobiliare Torino, Marco Grivetto" />
   <link rel="canonical" href="https://grivetto.it/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://grivetto.it/" />
-  <meta property="og:title" content="Marco Grivetto | Immobili di Pregio a Torino" />
+  <meta property="og:title" content="Immobili di Pregio Asti e Torino | Marco Grivetto" />
   <meta property="og:description"
-    content="Eccellenza dell'abitare. Scopri la nostra selezione esclusiva di immobili di lusso in vendita e affitto a Torino e provincia." />
+    content="Proprietà esclusive ad Asti e Torino. Selezione curata di immobili di lusso in vendita e affitto. Consulenza immobiliare professionale." />
   <meta property="og:image" content="https://grivetto.it/og-image.jpg" />
 
   <!-- Fonts -->
@@ -36,35 +38,75 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Marco Grivetto | Royal Team Immobiliare",
-      "image": "https://grivetto.it/og-image.jpg",
-      "@id": "https://grivetto.it",
-      "url": "https://grivetto.it",
-      "telephone": "+393470034777",
-      "email": "marco@royalteam-immobiliare.it",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Luigi Cibrario 30",
-        "addressLocality": "Torino",
-        "postalCode": "10143",
-        "addressCountry": "IT"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 45.0779,
-        "longitude": 7.6565
-      },
-      "areaServed": ["Torino", "Asti", "Piemonte"],
-      "priceRange": "$$$",
-      "founder": {
-        "@type": "Person",
-        "name": "Marco Grivetto"
-      },
-      "sameAs": [
-        "https://www.facebook.com/agenziaroyalteam/",
-        "https://www.instagram.com/royalteamimmobiliare/",
-        "https://x.com/royalteamimmobiliare"
+      "@graph": [
+        {
+          "@type": "RealEstateAgent",
+          "@id": "https://grivetto.it/#organization",
+          "name": "Marco Grivetto - Royal Team Immobiliare",
+          "url": "https://grivetto.it",
+          "logo": "https://grivetto.it/og-image.jpg",
+          "image": "https://grivetto.it/og-image.jpg",
+          "description": "Immobili di pregio ad Asti e Torino. Consulenza immobiliare professionale dal 2009.",
+          "telephone": "+393470034777",
+          "email": "marco@grivetto.it",
+          "areaServed": [
+            {"@type": "City", "name": "Asti"},
+            {"@type": "City", "name": "Torino"},
+            {"@type": "AdministrativeArea", "name": "Piemonte"}
+          ],
+          "priceRange": "€€€",
+          "founder": {
+            "@type": "Person",
+            "name": "Marco Grivetto",
+            "jobTitle": "Consulente Immobiliare"
+          },
+          "sameAs": [
+            "https://www.facebook.com/agenziaroyalteam/",
+            "https://www.instagram.com/royalteamimmobiliare/"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://grivetto.it/#asti-office",
+          "name": "Marco Grivetto - Ufficio Asti",
+          "parentOrganization": {"@id": "https://grivetto.it/#organization"},
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Brofferio 109",
+            "addressLocality": "Asti",
+            "postalCode": "14100",
+            "addressRegion": "AT",
+            "addressCountry": "IT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.9007,
+            "longitude": 8.2063
+          },
+          "telephone": "+393470034777",
+          "url": "https://grivetto.it"
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://grivetto.it/#torino-office",
+          "name": "Marco Grivetto - Ufficio Torino",
+          "parentOrganization": {"@id": "https://grivetto.it/#organization"},
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "C.so Casale 319",
+            "addressLocality": "Torino",
+            "postalCode": "10132",
+            "addressRegion": "TO",
+            "addressCountry": "IT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.0935,
+            "longitude": 7.7007
+          },
+          "telephone": "+393470034777",
+          "url": "https://grivetto.it"
+        }
       ]
     }
   </script>

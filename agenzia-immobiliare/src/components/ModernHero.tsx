@@ -26,7 +26,7 @@ export function ModernHero() {
                 >
                     <div className="inline-block px-4 py-2 rounded-full border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 backdrop-blur-sm">
                         <span className="text-[var(--color-accent)] text-sm font-medium tracking-wider uppercase">
-                            Immobili di Pregio
+                            Immobili di Pregio Asti e Torino
                         </span>
                     </div>
 
@@ -39,7 +39,7 @@ export function ModernHero() {
                     </h1>
 
                     <p className="text-xl text-[var(--color-text-muted)] max-w-lg leading-relaxed">
-                        Proprietà selezionate per una clientela esigente. Vivi il lusso moderno nelle zone più prestigiose di Torino.
+                        Proprietà esclusive ad Asti e Torino. Selezioniamo solo le migliori opportunità immobiliari per una clientela esigente.
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
