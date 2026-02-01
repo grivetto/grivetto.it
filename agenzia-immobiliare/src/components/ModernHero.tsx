@@ -44,16 +44,16 @@ export function ModernHero() {
 
                     <div className="flex flex-wrap gap-4 pt-4">
                         <a
-                            href="#immobili"
+                            href="#immobili-vendita"
                             className="px-8 py-4 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-semibold rounded-none transition-all duration-300 shadow-[var(--shadow-glow)] hover:scale-105 cursor-pointer inline-block text-center"
                         >
-                            Vedi Immobili
+                            Immobili in Vendita
                         </a>
                         <a
-                            href="#richiedi-appuntamento"
+                            href="#immobili-affitto"
                             className="px-8 py-4 border border-white/20 hover:border-white/50 hover:bg-white/5 text-white font-semibold rounded-none transition-all duration-300 backdrop-blur-sm cursor-pointer inline-block text-center"
                         >
-                            Contattaci
+                            Immobili in Affitto
                         </a>
                     </div>
                 </motion.div>
