@@ -51,19 +51,33 @@ export const Footer = () => {
                             <div>
                                 <h4 className="text-white font-medium mb-1">Asti</h4>
                                 <p className="text-[var(--color-text-muted)] text-sm mb-3">Via Brofferio 109<br />14100 Asti AT</p>
-                                <a
-                                    href="https://www.google.com/maps/search/?api=1&query=Via+Brofferio+109+14100+Asti+AT"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-accent)] hover:text-white transition-colors group"
-                                >
-                                    <MapPin size={14} className="group-hover:animate-bounce" />
-                                    Vedi su Maps
-                                </a>
+                                <div className="flex flex-col gap-2">
+                                    <a
+                                        href="https://maps.app.goo.gl/JjtByd9Peeivg1FY7?g_st=aw"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-accent)] hover:text-white transition-colors group"
+                                    >
+                                        <MapPin size={14} className="group-hover:animate-bounce" />
+                                        Vedi posizione 1
+                                    </a>
+                                    <a
+                                        href="https://maps.app.goo.gl/Fud7e6GW5His3hve7?g_st=aw"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-accent)] hover:text-white transition-colors group"
+                                    >
+                                        <MapPin size={14} className="group-hover:animate-bounce" />
+                                        Vedi posizione 2
+                                    </a>
+                                </div>
                             </div>
                             <div>
                                 <h4 className="text-white font-medium mb-1">Torino</h4>
-                                <p className="text-[var(--color-text-muted)] text-sm">C.so Casale 319<br />10132 Torino TO</p>
+                                <p className="text-[var(--color-text-muted)] text-sm">
+                                    C.so Casale 319 - 10132 TO<br />
+                                    Via Luigi Cibrario 30 - 10143 TO
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -74,12 +88,22 @@ export const Footer = () => {
                             Contatti
                         </h3>
                         <div className="space-y-4">
+                            <a href="tel:0114338496" className="block text-[var(--color-text-muted)] hover:text-white transition-colors">
+                                Tel. 011 4338496
+                            </a>
+                            <p className="text-[var(--color-text-muted)] block">Fax 011 4379934</p>
                             <a href="tel:3470034777" className="block text-2xl font-display text-white hover:text-[var(--color-accent)] transition-colors">
                                 347.0034777
                             </a>
-                            <a href="mailto:marco@grivetto.it" className="block text-[var(--color-text-muted)] hover:text-white transition-colors">
-                                marco@grivetto.it
+                            <a href="mailto:info@royalteam-immobiliare.it" className="block text-[var(--color-text-muted)] hover:text-white transition-colors">
+                                info@royalteam-immobiliare.it
                             </a>
+                            <a href="mailto:marco@royalteam-immobiliare.it" className="block text-[var(--color-text-muted)] hover:text-white transition-colors">
+                                marco@royalteam-immobiliare.it
+                            </a>
+                            <p className="text-xs text-white/30 pt-4">
+                                P.IVA 10140700013
+                            </p>
                         </div>
                     </div>
 
