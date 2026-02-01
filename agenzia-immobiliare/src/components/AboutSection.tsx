@@ -21,14 +21,13 @@ export const AboutSection = () => {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-display text-white leading-tight">
-                            Quasi 20 anni di <br />
+                            Oltre 15 anni di <br />
                             <span className="text-[var(--color-accent)]">Eccellenza Immobiliare</span>
                         </h2>
 
                         <div className="space-y-6 text-[var(--color-text-muted)] text-lg leading-relaxed">
                             <p>
-                                Benvenuti. Sono <strong className="text-white">Marco Grivetto</strong>, fondatore di <em>Royal Team Immobiliare</em>.
-                                Da quasi vent'anni, opero con passione e dedizione nel mercato immobiliare di <strong className="text-white">Torino</strong> e <strong className="text-white">Asti</strong>.
+                                Benvenuti. Sono <strong className="text-white">Marco Grivetto</strong>, CONSULENTE Immobiliare da oltre 15 anni opero con passione e dedizione nel mercato immobiliare di <strong className="text-white">Torino</strong> e <strong className="text-white">Asti</strong>.
                             </p>
                             <p>
                                 La mia filosofia è semplice: offrire un servizio sartoriale, basato su trasparenza, competenza e una profonda conoscenza del territorio.
@@ -65,7 +64,7 @@ export const AboutSection = () => {
                             {/* Stats Overlay */}
                             <div className="absolute bottom-0 left-0 w-full p-8 grid grid-cols-2 gap-4 border-t border-white/10 bg-black/20 backdrop-blur-md">
                                 <div>
-                                    <p className="text-3xl font-display text-white">20</p>
+                                    <p className="text-3xl font-display text-white">15+</p>
                                     <p className="text-xs text-[var(--color-accent)] uppercase tracking-wider">Anni di Esperienza</p>
                                 </div>
                                 <div>
