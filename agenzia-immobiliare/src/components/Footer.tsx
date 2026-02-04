@@ -14,8 +14,8 @@ export const Footer = () => {
 
                     {/* Column 1: About */}
                     <div>
-                        <h3 className="font-display text-lg tracking-wider mb-6 text-white">
-                            MARCO <span className="text-[var(--color-accent)]">GRIVETTO</span>
+                        <h3 className="font-[var(--font-script)] text-4xl tracking-wide mb-6 text-white">
+                            Marco <span className="text-[var(--color-accent)]">Grivetto</span>
                         </h3>
                         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-8 max-w-xs">
                             Eccellenza nel settore immobiliare. Selezioniamo solo le migliori proprietà per una clientela esigente.
