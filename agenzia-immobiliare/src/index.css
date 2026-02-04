@@ -17,6 +17,7 @@
   /* Typography */
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
+  --font-script: 'Pinyon Script', cursive;
 
   /* Spacing */
   --spacing-section: 6rem;

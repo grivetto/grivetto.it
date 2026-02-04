@@ -16,8 +16,8 @@ export const Navbar = () => {
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-[var(--color-primary)]/80 backdrop-blur-md py-4 shadow-[var(--shadow-elevation)] border-b border-white/5' : 'bg-transparent py-8'
             }`}>
             <div className="container mx-auto px-6 flex items-center justify-between">
-                <a href="#" className="text-2xl font-display font-light text-white tracking-wider">
-                    MARCO <span className="font-semibold text-accent">GRIVETTO</span>
+                <a href="#" className="text-4xl font-[var(--font-script)] text-white/90 hover:text-white transition-colors">
+                    Marco <span className="text-accent">Grivetto</span>
                 </a>
 
                 {/* Desktop Menu */}
