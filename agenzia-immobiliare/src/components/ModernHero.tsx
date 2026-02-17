@@ -81,8 +81,8 @@ export function ModernHero() {
                                 {/* Card Background Image */}
                                 <div className="absolute inset-0">
                                     <img
-                                        src="https://images.gestionaleimmobiliare.it/foto/annunci/251019/4647138/600x600/000__drone-5.jpg"
-                                        alt="Villa in vendita a Cossombrato"
+                                        src="/assets/card-3.webp"
+                                        alt="Villa di lusso - Portfolio"
                                         className="w-full h-full object-cover"
                                     />
                                     {/* Gradient Overlay for text readability */}
@@ -90,9 +90,11 @@ export function ModernHero() {
                                 </div>
 
                                 <div className="absolute top-0 right-0 p-8 opacity-20 text-[var(--color-accent)] z-10">
-                                    <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 2L2 22h20L12 2zm0 3.8L18.4 20H5.6L12 5.8z" />
-                                    </svg>
+                                    <img
+                                        src="https://media.gestionaleimmobiliare.it/files/dynaweb_2_0/1617/logo/Logo_RoyalTeam__1_.png"
+                                        alt="Royal Team Logo"
+                                        className="w-16 h-auto drop-shadow-2xl brightness-125"
+                                    />
                                 </div>
 
                                 <div className="relative h-full flex flex-col justify-end p-6 z-10">

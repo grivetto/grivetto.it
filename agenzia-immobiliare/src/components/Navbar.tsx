@@ -16,8 +16,15 @@ export const Navbar = () => {
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-[var(--color-primary)]/80 backdrop-blur-md py-4 shadow-[var(--shadow-elevation)] border-b border-white/5' : 'bg-transparent py-8'
             }`}>
             <div className="container mx-auto px-6 flex items-center justify-between">
-                <a href="#" className="text-4xl font-[var(--font-script)] text-white/90 hover:text-white transition-colors">
-                    Marco <span className="text-accent">Grivetto</span>
+                <a href="#" className="flex items-center gap-4 group">
+                    <img
+                        src="https://media.gestionaleimmobiliare.it/files/dynaweb_2_0/1617/logo/Logo_RoyalTeam__1_.png"
+                        alt="Royal Team Logo"
+                        className="h-12 w-auto brightness-110 group-hover:scale-105 transition-transform"
+                    />
+                    <div className="text-4xl font-[var(--font-script)] text-white/90 hover:text-white transition-colors">
+                        Marco <span className="text-accent">Grivetto</span>
+                    </div>
                 </a>
 
                 {/* Desktop Menu */}
