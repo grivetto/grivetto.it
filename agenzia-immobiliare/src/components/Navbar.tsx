@@ -29,7 +29,7 @@ export const Navbar = () => {
                         if (item === 'Richiedi Appuntamento') href = "#richiedi-appuntamento";
                         if (item === 'Esclusiva Selezione') href = "#immobili";
                         if (item === 'Recensioni') {
-                            href = "https://www.google.com/search?sca_esv=37b29cacd6547f1e&rlz=1C1FKPE_enIT1177IT1177&sxsrf=ANbL-n69wZf_yhNyvsvWwq82kt_EZL3TIw:1769880203587&q=search+rewiew+for+royalteam+immobilare+asti&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qObQmHPoXqK-3EdcjlXNCOjck7JRyYVLzCjCmaUY74I3M4p5mo8t2dVIFHOfYL2PS2SGOs8M%3D&uds=ALYpb_nyEaCYADf75iw0qqWiiEWFNfjR1x8-erjX5Hb49Cw5lqt99B6UryNyHLMy5E0YVHE0jiOMZ_NVart9oSiYqmGPjgzFUjf2KkZtFNZPtM82nGpSdip8kEg5NZ-KA5K2JMFRJhuF1LWFhEERaZwTT1woiSnzsQ&sa=X&ved=2ahUKEwjRuNHGpbaSAxX_Rf4FHXbWIRoQ3PALegQIORAF&biw=1920&bih=1031&aic=0";
+                            href = "https://www.google.com/search?q=Royal+Team+Immobiliare+Asti+Recensioni";
                             target = "_blank";
                         }
                         if (item === 'Dove Siamo') href = "#dove-siamo";
@@ -74,7 +74,7 @@ export const Navbar = () => {
                                 if (item === 'Richiedi Appuntamento' || item === 'Contatti') href = "#richiedi-appuntamento";
                                 if (item === 'Esclusiva Selezione') href = "#immobili";
                                 if (item === 'Recensioni') {
-                                    href = "https://www.google.com/search?sca_esv=37b29cacd6547f1e&rlz=1C1FKPE_enIT1177IT1177&sxsrf=ANbL-n69wZf_yhNyvsvWwq82kt_EZL3TIw:1769880203587&q=search+rewiew+for+royalteam+immobilare+asti&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qObQmHPoXqK-3EdcjlXNCOjck7JRyYVLzCjCmaUY74I3M4p5mo8t2dVIFHOfYL2PS2SGOs8M%3D&uds=ALYpb_nyEaCYADf75iw0qqWiiEWFNfjR1x8-erjX5Hb49Cw5lqt99B6UryNyHLMy5E0YVHE0jiOMZ_NVart9oSiYqmGPjgzFUjf2KkZtFNZPtM82nGpSdip8kEg5NZ-KA5K2JMFRJhuF1LWFhEERaZwTT1woiSnzsQ&sa=X&ved=2ahUKEwjRuNHGpbaSAxX_Rf4FHXbWIRoQ3PALegQIORAF&biw=1920&bih=1031&aic=0";
+                                    href = "https://www.google.com/search?q=Royal+Team+Immobiliare+Asti+Recensioni";
                                     target = "_blank";
                                 }
                                 if (item === 'Dove Siamo') href = "#dove-siamo";
