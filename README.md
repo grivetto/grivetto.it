@@ -1,4 +1,4 @@
-# Marco Grivetto - Portfolio Immobiliare
+# Marco Grivetto - Portfolio Immobiliare (v1.0 Stable)
 
 Una landing page moderna e ad alte prestazioni per **Marco Grivetto (Royal Team Immobiliare)**, progettata per mostrare immobili di lusso ed eccellenza professionale.
 
@@ -16,12 +16,14 @@ Questo progetto è costruito con uno stack frontend moderno focalizzato su prest
 
 *   **/agenzia-immobiliare**: Il codice sorgente principale dell'applicazione React.
     *   `/src/components`: Componenti UI riutilizzabili (Hero, Navbar, BentoGrid, Footer).
-    *   `/src/assets`: Immagini e risorse statiche.
+    *   `/src/assets`: Immagini e risorse statiche del core.
+    *   `/public/assets/properties`: Cache locale delle immagini degli annunci (gestita automaticamente).
 *   **/www**: La directory di staging locale per la build di produzione (puntata a `agenzia-immobiliare/dist`).
-*   **Script Python**: Script DevOps personalizzati per il deploy FTP e la diagnostica del server.
-    *   `deploy_site.py`: Distribuisce la build di produzione (`dist`) nella cartella `/www` del server FTP remoto, gestendo la pulizia automatica.
-    *   `download-listings.js`: Script Node.js per scaricare le ultime inserzioni dal sito live.
-    *   `fetch-listings.js`: Elabora i dati scaricati e classifica in VENDITA e AFFITTO.
+*   **Script di Automazione**: 
+    *   `scripts/download-listings.js`: Scarica le ultime inserzioni dal sito live Royal Team.
+    *   `scripts/fetch-listings.js`: Elabora i dati, classifica gli annunci e **scarica automaticamente le immagini in locale** per garantire prestazioni e stabilità.
+*   **Script DevOps**:
+    *   `deploy_site.py`: Distribuisce la build di produzione (`dist`) nella cartella `/www` del server FTP remoto.
 
 ## 🛠️ Sviluppo
 
@@ -36,36 +38,26 @@ cd agenzia-immobiliare
 npm install
 ```
 
-### Avvio Server Locale
+### Automazione Dati
 
+Per aggiornare gli immobili e scaricare le nuove immagini:
 ```bash
-npm run dev
+node scripts/download-listings.js && node scripts/fetch-listings.js
 ```
 
-### Build per la Produzione
+### Build e Deploy
 
 ```bash
 npm run build
+python deploy_site.py
 ```
-Gli artefatti della build verranno generati nella cartella `dist`.
 
-## 🌍 Deploy
+## ✨ Funzionalità v1.0 Stable
 
-Il sito è distribuito su un ambiente di hosting standard LAMP/FTP (Register.it) nella cartella `/www`.
-
-**Flusso di Lavoro per il Deploy:**
-1.  Esegui `npm run build` per generare il sito statico aggiornato.
-2.  Esegui `python deploy_site.py`. Lo script:
-    *   Pulisce la directory remota `/www`.
-    *   Carica il contenuto di `agenzia-immobiliare/dist` in `/www`.
-
-## ✨ Funzionalità Chiave
-
-*   **Estetica Dark Mode**: Sfondo antracite profondo (#121212) con accenti blu elettrico.
-*   **Design Responsivo**: Layout completamente fluido che si adatta a Mobile, Tablet e Desktop.
-*   **Glassmorphism**: Moderni effetti di vetro smerigliato sulla navigazione e sulle card.
-*   **Elementi Interattivi**: Scorrimento fluido, stati hover e animazioni di entrata.
-*   **Integrazione Google Maps**: Link diretti alla posizione per gli indirizzi degli uffici.
+*   **Local Image Caching**: Tutte le immagini degli annunci vengono scaricate e servite localmente per evitare problemi di hotlinking e 404 esterni.
+*   **Rimozione Automatica Annunci Scaduti**: Lo script di fetch pulisce automaticamente i dati vecchi e non più presenti sul sito sorgente.
+*   **Estetica Premium Dark Mode**: Sfondo antracite profondo con accenti blu elettrico e vetro smerigliato.
+*   **Mobile-First & Fluid Design**: Ottimizzato per ogni dimensione di schermo.
 
 ---
 © 2026 Marco Grivetto
