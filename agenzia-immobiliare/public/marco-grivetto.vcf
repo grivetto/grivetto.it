@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Marco Grivetto
+N:Grivetto;Marco;;;
+ORG:Royal Team Immobiliare
+TITLE:Consulente Immobiliare
+TEL;TYPE=CELL;TYPE=VOICE;TYPE=pref:+393470034777
+EMAIL;TYPE=WORK,INTERNET:marco@grivetto.it
+EMAIL;TYPE=WORK,INTERNET;LABEL=PEC:marcodg1@pec.it
+URL;TYPE=WORK:https://grivetto.it
+ADR;TYPE=WORK:;;Via Brofferio 109;Asti;AT;14100;Italy
+ADR;TYPE=WORK:;;Cso Casale 319;Torino;TO;10132;Italy
+NOTE:P.IVA 10140700013
+END:VCARD
