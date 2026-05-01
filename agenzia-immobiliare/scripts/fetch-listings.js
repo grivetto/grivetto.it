@@ -95,31 +95,32 @@ async function processListings() {
                 if (codeText) {
                     const upperCode = codeText.toUpperCase();
                     let type = 'Unknown';
-
-                    if (upperCode.startsWith('MGRV') || upperCode.startsWith('MGR')) {
-                        if (upperCode.startsWith('MGRA')) {
-                            type = 'Rent';
-                        } else {
-                            type = 'Sale';
-                        }
+                    // Determine type based on source filename
+                    if (file.toLowerCase().includes('vendita')) {
+                        type = 'Sale';
+                    } else if (file.toLowerCase().includes('affitto')) {
+                        type = 'Rent';
+                    } else if (upperCode.startsWith('MGRA')) {
+                        type = 'Rent';
+                    } else if (upperCode.startsWith('MGRV')) {
+                        type = 'Sale';
                     }
 
-                    if (upperCode.startsWith('MGR')) {
-                        // Download image locally
-                        const localImage = await downloadImage(externalImage, codeText);
+                    // Process all listings found
+                    // Download image locally
+                    const localImage = await downloadImage(externalImage, codeText);
 
-                        allListings.push({
-                            id: codeText,
-                            title,
-                            price,
-                            location: 'Torino & Provincia',
-                            image: localImage || externalImage, // Fallback to external if download fails
-                            link,
-                            area,
-                            code: codeText,
-                            type: type
-                        });
-                    }
+                    allListings.push({
+                        id: codeText,
+                        title,
+                        price,
+                        location: 'Torino & Provincia',
+                        image: localImage || externalImage, // Fallback to external if download fails
+                        link,
+                        area,
+                        code: codeText,
+                        type: type
+                    });
                 }
             }
         }
@@ -127,7 +128,7 @@ async function processListings() {
         // Deduplicate by ID
         const uniqueListings = Array.from(new Map(allListings.map(item => [item.id, item])).values());
 
-        console.log(`Total MGR listings found: ${uniqueListings.length}`);
+        console.log(`Total listings found: ${uniqueListings.length}`);
 
         await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
         await fs.writeFile(OUTPUT_FILE, JSON.stringify(uniqueListings, null, 2));
