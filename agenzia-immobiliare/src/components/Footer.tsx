@@ -21,11 +21,11 @@ export const Footer = () => {
                             Eccellenza nel settore immobiliare. Selezioniamo solo le migliori proprietà per una clientela esigente.
                         </p>
                         <div className="flex flex-col gap-4">
-                            <a href="https://www.facebook.com/agenziaroyalteam/" target="_blank" rel="noopener noreferrer"
+                            <a href="https://www.facebook.com/marco.royalteam?rdid=rtRgP7YTZbLFbCFA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18SfwB895W%2F#" target="_blank" rel="noopener noreferrer"
                                 className="group relative w-14 h-14 bg-gradient-to-br from-[#4267B2] to-[#2d4373] rounded-2xl flex items-center justify-center text-white transition-all duration-300 shadow-[0_8px_16px_rgba(66,103,178,0.3)] hover:shadow-[0_12px_24px_rgba(66,103,178,0.5)] hover:-translate-y-1 before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity">
                                 <Facebook size={22} className="relative z-10 drop-shadow-lg" />
                             </a>
-                            <a href="https://www.instagram.com/royalteamimmobiliare/" target="_blank" rel="noopener noreferrer"
+                            <a href="https://www.instagram.com/marcoaffittievendite?igsh=MTF5b3N5cXV4eW96ZQ%3D%3D" target="_blank" rel="noopener noreferrer"
                                 className="group relative w-14 h-14 bg-gradient-to-br from-[#E1306C] via-[#C13584] to-[#833AB4] rounded-2xl flex items-center justify-center text-white transition-all duration-300 shadow-[0_8px_16px_rgba(225,48,108,0.3)] hover:shadow-[0_12px_24px_rgba(225,48,108,0.5)] hover:-translate-y-1 before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity">
                                 <Instagram size={22} className="relative z-10 drop-shadow-lg" />
                             </a>
