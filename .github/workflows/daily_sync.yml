@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          ref: developer # Runs on the developer branch (or change to main/master if merged)
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
