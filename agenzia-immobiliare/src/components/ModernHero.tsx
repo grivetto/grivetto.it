@@ -44,13 +44,13 @@ export function ModernHero() {
 
                     <div className="flex flex-wrap gap-4 pt-4">
                         <a
-                            href="#immobili-vendita"
+                            href="https://www.royalteam-immobiliare.it/it/immobili-in-vendita"
                             className="px-8 py-4 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-semibold rounded-none transition-all duration-300 shadow-[var(--shadow-glow)] hover:scale-105 cursor-pointer inline-block text-center"
                         >
                             Immobili in Vendita
                         </a>
                         <a
-                            href="#immobili-affitto"
+                            href="https://www.royalteam-immobiliare.it/it/immobili-in-affitto"
                             className="px-8 py-4 border border-white/20 hover:border-white/50 hover:bg-white/5 text-white font-semibold rounded-none transition-all duration-300 backdrop-blur-sm cursor-pointer inline-block text-center"
                         >
                             Immobili in Affitto
@@ -73,7 +73,7 @@ export function ModernHero() {
                             className="relative w-96 h-[500px] z-20"
                         >
                             <a
-                                href="https://www.royalteam-immobiliare.it/it/villa-vendita-cossombrato-4647138"
+href="https://www.royalteam-immobiliare.it/it/villa-vendita-oviglio-4646660"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block w-full h-full glass-panel rounded-2xl border border-white/10 shadow-[var(--shadow-glow)] overflow-hidden transition-transform hover:scale-[1.02]"
@@ -98,13 +98,13 @@ export function ModernHero() {
                                 </div>
 
                                 <div className="relative h-full flex flex-col justify-end p-6 z-10">
-                                    <h3 className="text-3xl font-display text-white mb-2 leading-tight">Villa a Cossombrato</h3>
+                                    <h3 className="text-3xl font-display text-white mb-2 leading-tight">Villa a Oviglio</h3>
                                     <p className="text-[var(--color-accent)] mb-4">Asti, Italia</p>
                                     <div className="flex justify-between items-center text-sm text-gray-400 border-t border-white/10 pt-4">
                                         <div className="flex items-center gap-2">
-                                            <span>355 m²</span>
+                                            <span>500 m²</span>
                                         </div>
-                                        <span className="text-white font-semibold text-lg">€ 370.000</span>
+                                        <span className="text-white font-semibold text-lg">€ 300.000</span>
                                     </div>
                                 </div>
                             </a>

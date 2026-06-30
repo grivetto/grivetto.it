@@ -23,11 +23,11 @@ function App() {
         <AboutSection />
         <BentoFeatures />
 
-        <div id="immobili-vendita">
+        <div>
           <PropertiesSection category="VENDITA" />
         </div>
 
-        <div id="immobili-affitto">
+        <div>
           <PropertiesSection category="AFFITTO" />
         </div>
 

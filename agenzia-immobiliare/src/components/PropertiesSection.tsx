@@ -34,7 +34,7 @@ export const PropertiesSection = ({ category }: PropertiesSectionProps) => {
     });
 
     return (
-        <section id="immobili" className="relative py-32 bg-[var(--color-primary)]">
+        <section id={category ? `immobili-${category.toLowerCase()}` : 'esclusiva-selezione'} className="relative py-32 bg-[var(--color-primary)]">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

@@ -34,7 +34,7 @@ export const Navbar = () => {
                         let target = "_self";
 
                         if (item === 'Richiedi Appuntamento') href = "#richiedi-appuntamento";
-                        if (item === 'Esclusiva Selezione') href = "#immobili";
+                        if (item === 'Esclusiva Selezione') href = "https://www.royalteam-immobiliare.it/it/immobili-in-vendita";
                         if (item === 'Recensioni') {
                             href = "https://www.google.com/search?q=Royal+Team+Immobiliare+Asti+Recensioni";
                             target = "_blank";
@@ -79,7 +79,7 @@ export const Navbar = () => {
                                 let target = "_self";
 
                                 if (item === 'Richiedi Appuntamento' || item === 'Contatti') href = "#richiedi-appuntamento";
-                                if (item === 'Esclusiva Selezione') href = "#immobili";
+if (item === 'Esclusiva Selezione') href = "https://www.royalteam-immobiliare.it/it/immobili-in-vendita";
                                 if (item === 'Recensioni') {
                                     href = "https://www.google.com/search?q=Royal+Team+Immobiliare+Asti+Recensioni";
                                     target = "_blank";

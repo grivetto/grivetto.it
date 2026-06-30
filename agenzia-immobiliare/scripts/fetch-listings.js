@@ -92,19 +92,27 @@ async function processListings() {
 
                 const area = $el.find('.fa-ruler-combined').parent().text().replace(':', '').trim();
 
+                // Extract Location from title (e.g. "Appartamento in vendita a Torino" -> "Torino")
+                let location = 'Torino & Provincia';
+                const locationMatch = title.match(/\s+a\s+([^,]+)/i);
+                if (locationMatch) {
+                    location = locationMatch[1].trim();
+                }
+
                 if (codeText) {
                     const upperCode = codeText.toUpperCase();
-                    let type = 'Unknown';
-                    // Determine type based on source filename
-                    if (file.toLowerCase().includes('vendita')) {
-                        type = 'Sale';
-                    } else if (file.toLowerCase().includes('affitto')) {
-                        type = 'Rent';
-                    } else if (upperCode.startsWith('MGRA')) {
-                        type = 'Rent';
-                    } else if (upperCode.startsWith('MGRV')) {
-                        type = 'Sale';
+                    
+                    // Filter: Only include Marco's listings
+                    // MGRV = Sales (Vendita), MGRA = Rentals (Affitto)
+                    const isMarcoSale = upperCode.startsWith('MGRV');
+                    const isMarcoRent = upperCode.startsWith('MGRA');
+                    
+                    if (!isMarcoSale && !isMarcoRent) {
+                        continue; // Skip other agents' listings
                     }
+
+                    // Determine type based on code prefix
+                    const type = isMarcoSale ? 'Sale' : 'Rent';
 
                     // Process all listings found
                     // Download image locally
@@ -114,7 +122,7 @@ async function processListings() {
                         id: codeText,
                         title,
                         price,
-                        location: 'Torino & Provincia',
+                        location,
                         image: localImage || externalImage, // Fallback to external if download fails
                         link,
                         area,
