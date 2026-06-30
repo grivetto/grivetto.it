@@ -11,6 +11,14 @@ export const PropertiesSection = ({ category }: PropertiesSectionProps) => {
         if (!category) return true;
         const lowerTitle = item.title.toLowerCase();
 
+        // Handle strict Types from data
+        if (category === 'VENDITA') {
+            return (item as any).type === 'Sale';
+        }
+        if (category === 'AFFITTO') {
+            return (item as any).type === 'Rent';
+        }
+
         switch (category) {
             case 'Residenziale':
                 return lowerTitle.includes('appartamento') || lowerTitle.includes('casa') || lowerTitle.includes('bifamiliare') || lowerTitle.includes('attico');
@@ -26,7 +34,7 @@ export const PropertiesSection = ({ category }: PropertiesSectionProps) => {
     });
 
     return (
-        <section id="immobili" className="relative py-32 bg-[var(--color-primary)]">
+        <section id={category ? `immobili-${category.toLowerCase()}` : 'esclusiva-selezione'} className="relative py-32 bg-[var(--color-primary)]">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -42,14 +50,7 @@ export const PropertiesSection = ({ category }: PropertiesSectionProps) => {
                             Una collezione curata di proprietà prestigiose gestite direttamente da noi.
                         </p>
                     </div>
-                    <a
-                        href="https://www.royalteam-immobiliare.it/it/immobili-in-vendita"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-white hover:text-[var(--color-accent)] font-medium uppercase tracking-widest border-b border-white hover:border-[var(--color-accent)] pb-1 transition-colors cursor-pointer"
-                    >
-                        Vedi tutti gli immobili
-                    </a>
+
                 </motion.div>
 
                 {filteredListings.length > 0 ? (

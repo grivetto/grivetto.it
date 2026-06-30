@@ -4,23 +4,10 @@ import { BentoFeatures } from "./components/BentoFeatures";
 import { PropertiesSection } from "./components/PropertiesSection";
 import { ContactCTA } from "./components/ContactCTA";
 import { Footer } from "./components/Footer";
+import { AboutSection } from './components/AboutSection';
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
 
 function App() {
-  // const [category, setCategory] = useState<string | null>(null);
-  // Just use null if setCategory is unused, or remove state if unused entirely?
-  // PropertiesSection uses category.
-  // PropertiesSection category={category}
-  // So read is used, but write is not?
-  // Let's keep category but ignore setCategory destructuring.
-  const [category] = useState<string | null>(null);
-
-  // Smooth scroll to top on load
-  useState(() => {
-    window.scrollTo(0, 0);
-  });
-
   return (
     <AnimatePresence>
       <motion.main
@@ -33,11 +20,15 @@ function App() {
         <Navbar />
 
         <ModernHero />
-
+        <AboutSection />
         <BentoFeatures />
 
-        <div id="immobili">
-          <PropertiesSection category={category} />
+        <div>
+          <PropertiesSection category="VENDITA" />
+        </div>
+
+        <div>
+          <PropertiesSection category="AFFITTO" />
         </div>
 
         <div id="richiedi-appuntamento">

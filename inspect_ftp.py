@@ -20,7 +20,13 @@ def main():
         ftp.login(FTP_USER, FTP_PASS)
         print("Logged in.")
         
-        list_remote(ftp)
+        print(f"PWD: {ftp.pwd()}")
+        
+        print("\n--- Listing Names ---")
+        items = []
+        ftp.retrlines('NLST', items.append)
+        for i in items:
+            print(f"FOUND: {i}")
         
         ftp.quit()
 

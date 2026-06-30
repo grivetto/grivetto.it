@@ -1,0 +1,5 @@
+
+> agenzia-immobiliare@1.2.4 build
+> tsc -b && vite build
+
+src/components/BusinessCard.tsx(1,23): error TS6133: 'Globe' is declared but its value is never read.

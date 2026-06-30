@@ -16,8 +16,15 @@ export const Navbar = () => {
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-[var(--color-primary)]/80 backdrop-blur-md py-4 shadow-[var(--shadow-elevation)] border-b border-white/5' : 'bg-transparent py-8'
             }`}>
             <div className="container mx-auto px-6 flex items-center justify-between">
-                <a href="#" className="text-2xl font-display font-light text-white tracking-wider">
-                    MARCO <span className="font-semibold text-accent">GRIVETTO</span>
+                <a href="#" className="flex items-center gap-4 group">
+                    <img
+                        src="https://media.gestionaleimmobiliare.it/files/dynaweb_2_0/1617/logo/Logo_RoyalTeam__1_.png"
+                        alt="Royal Team Logo"
+                        className="h-12 w-auto brightness-110 group-hover:scale-105 transition-transform"
+                    />
+                    <div className="text-4xl font-[var(--font-script)] text-white/90 hover:text-white transition-colors">
+                        Marco <span className="text-accent">Grivetto</span>
+                    </div>
                 </a>
 
                 {/* Desktop Menu */}
@@ -27,9 +34,9 @@ export const Navbar = () => {
                         let target = "_self";
 
                         if (item === 'Richiedi Appuntamento') href = "#richiedi-appuntamento";
-                        if (item === 'Esclusiva Selezione') href = "#immobili";
+                        if (item === 'Esclusiva Selezione') href = "https://www.royalteam-immobiliare.it/it/immobili-in-vendita";
                         if (item === 'Recensioni') {
-                            href = "https://www.google.com/search?sca_esv=37b29cacd6547f1e&rlz=1C1FKPE_enIT1177IT1177&sxsrf=ANbL-n69wZf_yhNyvsvWwq82kt_EZL3TIw:1769880203587&q=search+rewiew+for+royalteam+immobilare+asti&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qObQmHPoXqK-3EdcjlXNCOjck7JRyYVLzCjCmaUY74I3M4p5mo8t2dVIFHOfYL2PS2SGOs8M%3D&uds=ALYpb_nyEaCYADf75iw0qqWiiEWFNfjR1x8-erjX5Hb49Cw5lqt99B6UryNyHLMy5E0YVHE0jiOMZ_NVart9oSiYqmGPjgzFUjf2KkZtFNZPtM82nGpSdip8kEg5NZ-KA5K2JMFRJhuF1LWFhEERaZwTT1woiSnzsQ&sa=X&ved=2ahUKEwjRuNHGpbaSAxX_Rf4FHXbWIRoQ3PALegQIORAF&biw=1920&bih=1031&aic=0";
+                            href = "https://www.google.com/search?q=Royal+Team+Immobiliare+Asti+Recensioni";
                             target = "_blank";
                         }
                         if (item === 'Dove Siamo') href = "#dove-siamo";
@@ -72,9 +79,9 @@ export const Navbar = () => {
                                 let target = "_self";
 
                                 if (item === 'Richiedi Appuntamento' || item === 'Contatti') href = "#richiedi-appuntamento";
-                                if (item === 'Esclusiva Selezione') href = "#immobili";
+if (item === 'Esclusiva Selezione') href = "https://www.royalteam-immobiliare.it/it/immobili-in-vendita";
                                 if (item === 'Recensioni') {
-                                    href = "https://www.google.com/search?sca_esv=37b29cacd6547f1e&rlz=1C1FKPE_enIT1177IT1177&sxsrf=ANbL-n69wZf_yhNyvsvWwq82kt_EZL3TIw:1769880203587&q=search+rewiew+for+royalteam+immobilare+asti&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qObQmHPoXqK-3EdcjlXNCOjck7JRyYVLzCjCmaUY74I3M4p5mo8t2dVIFHOfYL2PS2SGOs8M%3D&uds=ALYpb_nyEaCYADf75iw0qqWiiEWFNfjR1x8-erjX5Hb49Cw5lqt99B6UryNyHLMy5E0YVHE0jiOMZ_NVart9oSiYqmGPjgzFUjf2KkZtFNZPtM82nGpSdip8kEg5NZ-KA5K2JMFRJhuF1LWFhEERaZwTT1woiSnzsQ&sa=X&ved=2ahUKEwjRuNHGpbaSAxX_Rf4FHXbWIRoQ3PALegQIORAF&biw=1920&bih=1031&aic=0";
+                                    href = "https://www.google.com/search?q=Royal+Team+Immobiliare+Asti+Recensioni";
                                     target = "_blank";
                                 }
                                 if (item === 'Dove Siamo') href = "#dove-siamo";

@@ -1,69 +1,63 @@
-# Marco Grivetto - Real Estate Portfolio
+# Marco Grivetto - Portfolio Immobiliare (v1.0 Stable)
 
-A modern, high-performance landing page for **Marco Grivetto (Royal Team Immobiliare)**, designed to showcase luxury properties and professional excellence.
+Una landing page moderna e ad alte prestazioni per **Marco Grivetto (Royal Team Immobiliare)**, progettata per mostrare immobili di lusso ed eccellenza professionale.
 
-## 🚀 Tech Stack
+## 🚀 Stack Tecnologico
 
-This project is built with a modern frontend stack focusing on performance, aesthetics, and smooth interactions:
+Questo progetto è costruito con uno stack frontend moderno focalizzato su prestazioni, estetica e interazioni fluide:
 
-*   **[React 18](https://reactjs.org/)**: Core UI library for component-based architecture.
-*   **[Vite](https://vitejs.dev/)**: Next-generation frontend tooling for lightning-fast builds and HMR.
-*   **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for rapid, custom design implementation.
-*   **[Framer Motion](https://www.framer.com/motion/)**: Production-ready animation library for complex UI transitions and 3D-like effects.
-*   **[Lucide React](https://lucide.dev/)**: Beautiful, consistent icon set.
+*   **[React 18](https://reactjs.org/)**: Libreria UI core per l'architettura basata su componenti.
+*   **[Vite](https://vitejs.dev/)**: Tooling frontend di nuova generazione per build ultra-veloci e HMR.
+*   **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utility-first per un'implementazione rapida del design personalizzato.
+*   **[Framer Motion](https://www.framer.com/motion/)**: Libreria di animazione pronta per la produzione per transizioni UI complesse ed effetti simil-3D.
+*   **[Lucide React](https://lucide.dev/)**: Set di icone bello e coerente.
 
-## 📂 Project Structure
+## 📂 Struttura del Progetto
 
-*   **/agenzia-immobiliare**: The main React application source code.
-    *   `/src/components`: Reusable UI components (Hero, Navbar, BentoGrid, Footer).
-    *   `/src/assets`: Images and static resources.
-*   **/www**: The local staging directory for the production build.
-*   **Python Scripts**: Custom DevOps scripts for FTP deployment and server diagnostics.
-    *   `deploy_site_www.py`: Deploys the `www` folder to the remote FTP server.
-    *   `probe_server.py`: Diagnostic tool for server environment checks.
+*   **/agenzia-immobiliare**: Il codice sorgente principale dell'applicazione React.
+    *   `/src/components`: Componenti UI riutilizzabili (Hero, Navbar, BentoGrid, Footer).
+    *   `/src/assets`: Immagini e risorse statiche del core.
+    *   `/public/assets/properties`: Cache locale delle immagini degli annunci (gestita automaticamente).
+*   **/www**: La directory di staging locale per la build di produzione (puntata a `agenzia-immobiliare/dist`).
+*   **Script di Automazione**: 
+    *   `scripts/download-listings.js`: Scarica le ultime inserzioni dal sito live Royal Team.
+    *   `scripts/fetch-listings.js`: Elabora i dati, classifica gli annunci e **scarica automaticamente le immagini in locale** per garantire prestazioni e stabilità.
+*   **Script DevOps**:
+    *   `deploy_site.py`: Distribuisce la build di produzione (`dist`) nella cartella `/www` del server FTP remoto.
 
-## 🛠️ Development
+## 🛠️ Sviluppo
 
-### Prerequisites
+### Prerequisiti
 *   Node.js (v18+)
 *   npm
 
-### Installation
+### Installazione
 
 ```bash
 cd agenzia-immobiliare
 npm install
 ```
 
-### Run Local Server
+### Automazione Dati
 
+Per aggiornare gli immobili e scaricare le nuove immagini:
 ```bash
-npm run dev
+node scripts/download-listings.js && node scripts/fetch-listings.js
 ```
 
-### Build for Production
+### Build e Deploy
 
 ```bash
 npm run build
+python deploy_site.py
 ```
-The build artifacts will be generated in the `dist` folder.
 
-## 🌍 Deployment
+## ✨ Funzionalità v1.0 Stable
 
-The site is deployed to a standard LAMP/FTP hosting environment (Register.it).
-
-**Deployment Workflow:**
-1.  Run `npm run build` to generate the static site.
-2.  Sync the `dist` folder to the local `www` directory.
-3.  Run `python deploy_site_www.py` to upload changes via FTP.
-
-## ✨ Key Features
-
-*   **Dark Mode Aesthetic**: Deep charcoal background (#121212) with electric blue accents.
-*   **Responsive Design**: Fully fluid layout adapting to Mobile, Tablet, and Desktop.
-*   **Glassmorphism**: Modern frosted glass effects on navigation and cards.
-*   **Interactive Elements**: Smooth scrolling, hover states, and entrance animations.
-*   **Google Maps Integration**: Direct location links for office addresses.
+*   **Local Image Caching**: Tutte le immagini degli annunci vengono scaricate e servite localmente per evitare problemi di hotlinking e 404 esterni.
+*   **Rimozione Automatica Annunci Scaduti**: Lo script di fetch pulisce automaticamente i dati vecchi e non più presenti sul sito sorgente.
+*   **Estetica Premium Dark Mode**: Sfondo antracite profondo con accenti blu elettrico e vetro smerigliato.
+*   **Mobile-First & Fluid Design**: Ottimizzato per ogni dimensione di schermo.
 
 ---
 © 2026 Marco Grivetto

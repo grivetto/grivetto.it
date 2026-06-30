@@ -6,7 +6,7 @@ import ssl
 FTP_HOST = "grivet.ftp.tb-hosting.com"
 FTP_USER = "grivettoit@grivettoit"
 FTP_PASS = "@Nicotina_1969!!"
-LOCAL_ROOT = "c:\\dev\\grivetto.it\\www"
+LOCAL_ROOT = "c:\\dev\\grivetto.it\\agenzia-immobiliare\\dist"
 
 def clean_remote_dir(ftp, dir_path="."):
     """
@@ -105,17 +105,42 @@ def main():
         ftp.login(FTP_USER, FTP_PASS)
         print("Logged in.")
 
-        # Clean remote root
-        print("Starting cleanup of remote site...")
+        # Clean remote root of the misplaced files (index.html, vite.svg, assets)
+        print("Cleaning root of misplaced files...")
         try:
-           # Clean everything in the root
-           clean_remote_dir(ftp, ".")
+             # Basic cleanup of root items that shouldn't be there
+             files = []
+             ftp.retrlines('NLST', files.append)
+             for f in files:
+                 if f in ['.', '..', 'public_html', 'www']: continue
+                 try:
+                     if '.' in f: # Assume file
+                        ftp.delete(f)
+                        print(f"Removed root file: {f}")
+                     else: # Assume directory (like assets)
+                        try:
+                            clean_remote_dir(ftp, f)
+                            ftp.rmd(f)
+                            print(f"Removed root dir: {f}")
+                        except:
+                            pass
+                 except:
+                    pass
         except Exception as e:
-           print(f"Warning during cleanup: {e}")
+            print(f"Cleanup warning: {e}")
 
-        # Upload new site
-        print("Starting upload of new site...")
-        upload_dir(ftp, LOCAL_ROOT, ".")
+        # Ensure www exists
+        if "www" not in files:
+            print("Creating www...")
+            ftp.mkd("www")
+
+        # Clean www
+        print("Cleaning www...")
+        clean_remote_dir(ftp, "www")
+
+        # Upload new site to www
+        print("Starting upload of new site to www...")
+        upload_dir(ftp, LOCAL_ROOT, "www")
         
         ftp.quit()
         print("Deployment complete.")

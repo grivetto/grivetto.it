@@ -34,6 +34,9 @@ export const PropertyCard = ({ image, title, location, price, gridClass = "", de
                     src={image}
                     alt={title}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/assets/card-1.webp';
+                    }}
                 />
             ) : (
                 <div className="h-full w-full flex items-center justify-center text-white/20 bg-[var(--color-surface)]">

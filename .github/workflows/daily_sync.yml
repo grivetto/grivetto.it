@@ -1,0 +1,45 @@
+name: Daily Listings Sync and Deploy
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Runs at 03:00 UTC (05:00 Italian time) every day
+  workflow_dispatch: # Allows manual triggering from the Actions tab on GitHub
+
+jobs:
+  sync-build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: agenzia-immobiliare/package-lock.json
+
+      - name: Install Node Dependencies
+        run: |
+          cd agenzia-immobiliare
+          npm ci
+
+      - name: Sync Listings (Scrape Royal Team)
+        run: |
+          cd agenzia-immobiliare
+          npm run sync-listings
+
+      - name: Build React App
+        run: |
+          cd agenzia-immobiliare
+          npm run build
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Deploy to FTP
+        run: |
+          python deploy_site.py

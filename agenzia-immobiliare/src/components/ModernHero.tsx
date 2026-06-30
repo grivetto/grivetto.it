@@ -10,7 +10,8 @@ export function ModernHero() {
                 <div className="absolute inset-0 bg-[var(--color-primary)] opacity-90 z-0" />
                 <img
                     src={heroBg}
-                    alt="Luxury Interior"
+                    alt="Luxury Interior Design - Appartamento di Lusso a Torino"
+                    fetchPriority="high"
                     className="w-full h-full object-cover object-center opacity-40 mix-blend-overlay"
                 />
             </div>
@@ -25,7 +26,7 @@ export function ModernHero() {
                 >
                     <div className="inline-block px-4 py-2 rounded-full border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 backdrop-blur-sm">
                         <span className="text-[var(--color-accent)] text-sm font-medium tracking-wider uppercase">
-                            Immobili di Pregio
+                            Immobili di Pregio Asti e Torino
                         </span>
                     </div>
 
@@ -38,21 +39,21 @@ export function ModernHero() {
                     </h1>
 
                     <p className="text-xl text-[var(--color-text-muted)] max-w-lg leading-relaxed">
-                        Proprietà selezionate per una clientela esigente. Vivi il lusso moderno nelle zone più prestigiose di Torino.
+                        Proprietà esclusive ad Asti e Torino. Selezioniamo solo le migliori opportunità immobiliari per una clientela esigente.
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
                         <a
-                            href="#immobili"
+                            href="https://www.royalteam-immobiliare.it/it/immobili-in-vendita"
                             className="px-8 py-4 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-semibold rounded-none transition-all duration-300 shadow-[var(--shadow-glow)] hover:scale-105 cursor-pointer inline-block text-center"
                         >
-                            Vedi Immobili
+                            Immobili in Vendita
                         </a>
                         <a
-                            href="#richiedi-appuntamento"
+                            href="https://www.royalteam-immobiliare.it/it/immobili-in-affitto"
                             className="px-8 py-4 border border-white/20 hover:border-white/50 hover:bg-white/5 text-white font-semibold rounded-none transition-all duration-300 backdrop-blur-sm cursor-pointer inline-block text-center"
                         >
-                            Contattaci
+                            Immobili in Affitto
                         </a>
                     </div>
                 </motion.div>
@@ -69,35 +70,44 @@ export function ModernHero() {
                         <motion.div
                             animate={{ y: [0, -20, 0] }}
                             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-                            className="relative w-96 h-[500px] glass-panel rounded-2xl border border-white/10 shadow-[var(--shadow-glow)] z-20 overflow-hidden"
+                            className="relative w-96 h-[500px] z-20"
                         >
-                            {/* Card Background Image */}
-                            <div className="absolute inset-0">
-                                <img
-                                    src="https://images.gestionaleimmobiliare.it/foto/annunci/251019/4647138/600x600/000__drone-4.jpg"
-                                    alt="Villa in vendita a Cossombrato"
-                                    className="w-full h-full object-cover"
-                                />
-                                {/* Gradient Overlay for text readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/50 to-transparent opacity-90" />
-                            </div>
-
-                            <div className="absolute top-0 right-0 p-8 opacity-20 text-[var(--color-accent)] z-10">
-                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2L2 22h20L12 2zm0 3.8L18.4 20H5.6L12 5.8z" />
-                                </svg>
-                            </div>
-
-                            <div className="relative h-full flex flex-col justify-end p-6 z-10">
-                                <h3 className="text-3xl font-display text-white mb-2 leading-tight">Villa a Cossombrato</h3>
-                                <p className="text-[var(--color-accent)] mb-4">Asti, Italia</p>
-                                <div className="flex justify-between items-center text-sm text-gray-400 border-t border-white/10 pt-4">
-                                    <div className="flex items-center gap-2">
-                                        <span>355 m²</span>
-                                    </div>
-                                    <span className="text-white font-semibold text-lg">€ 370.000</span>
+                            <a
+href="https://www.royalteam-immobiliare.it/it/villa-vendita-oviglio-4646660"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full h-full glass-panel rounded-2xl border border-white/10 shadow-[var(--shadow-glow)] overflow-hidden transition-transform hover:scale-[1.02]"
+                            >
+                                {/* Card Background Image */}
+                                <div className="absolute inset-0">
+                                    <img
+                                        src="/assets/card-3.webp"
+                                        alt="Villa di lusso - Portfolio"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    {/* Gradient Overlay for text readability */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/50 to-transparent opacity-90" />
                                 </div>
-                            </div>
+
+                                <div className="absolute top-0 right-0 p-8 opacity-20 text-[var(--color-accent)] z-10">
+                                    <img
+                                        src="https://media.gestionaleimmobiliare.it/files/dynaweb_2_0/1617/logo/Logo_RoyalTeam__1_.png"
+                                        alt="Royal Team Logo"
+                                        className="w-16 h-auto drop-shadow-2xl brightness-125"
+                                    />
+                                </div>
+
+                                <div className="relative h-full flex flex-col justify-end p-6 z-10">
+                                    <h3 className="text-3xl font-display text-white mb-2 leading-tight">Villa a Oviglio</h3>
+                                    <p className="text-[var(--color-accent)] mb-4">Asti, Italia</p>
+                                    <div className="flex justify-between items-center text-sm text-gray-400 border-t border-white/10 pt-4">
+                                        <div className="flex items-center gap-2">
+                                            <span>500 m²</span>
+                                        </div>
+                                        <span className="text-white font-semibold text-lg">€ 300.000</span>
+                                    </div>
+                                </div>
+                            </a>
                         </motion.div>
 
                         {/* Decorative Elements */}
